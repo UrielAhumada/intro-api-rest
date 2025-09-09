@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitor IoT</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <img src="assets/logo.png" alt="Logo" width="30" class="me-2"> IoT Control
+      </a>
+      <div>
+        <a href="index.html" class="btn btn-outline-info">Ir a Control</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="container my-4 flex-grow-1">
+    <h2 class="text-center mb-4">Monitor de Dispositivos IoT</h2>
+
+    <!-- Último valor -->
+    <div class="alert alert-info text-center fw-bold" id="lastStatus">
+      Último comando: Cargando...
+    </div>
+
+    <!-- Tabla últimos 10 registros -->
+    <div class="card shadow">
+      <div class="card-header">Últimos 10 registros</div>
+      <div class="card-body">
+        <table class="table table-striped text-center">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Dispositivo</th>
+              <th>Status</th>
+              <th>IP</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody id="recordsTable"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-auto">
+    Desarrollado por Uriel Huerta © 2025
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/monitor.js"></script>
+</body>
+</html>
